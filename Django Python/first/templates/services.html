@@ -1,0 +1,15 @@
+{% extends "footer.html" %}
+{% block title %}Services{% endblock title %}
+{% block body %}
+
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="container my-5">
+        <div class="d-grid gap-2 col-6 mx-auto">
+            <button class="btn btn-primary" type="Submit" name="Start">Start</button>
+            <button class="btn btn-primary" type="Submit" name="Stop">Stop</button>
+        </div>
+    </div>
+</form>    
+
+{% endblock body %}

@@ -1,0 +1,36 @@
+{% extends "footer.html" %}
+{% block title %}Contact{% endblock title %}
+{% block body %}
+
+<div class="container my-0 px-0 py-0 mx-0 opacity-50">
+    <img src="https://source.unsplash.com/random/1366x573/?phone,contact">
+    </div>
+</div>
+<div class="opacity-100">
+    <div class="position-absolute bottom-0 start-50 translate-middle-x">
+        <h1>Contact Us</h1>
+        <div>
+            <a target="_blank" href="https://www.youtube.com/@Strange_Coder" title="Kumar on Youtube"><img src="/static/images/youtubepng.png" height="80" width="80"></a>
+            <a target="_blank" href="https://discord.com/channels/@kumarbaberval" title="Join the Kumar on Discord"><img src="/static/images/discordpng.png" height="70" width="70"></a>
+            <a target="_blank" href="https://www.instagram.com/kumar_baberwal/" title="Kumar on Instagram"><img src="/static/images/instapng.png" height="80" width="80"></a>  
+        </div>
+        <form method="post" action="/contact">
+            {% csrf_token %}
+            <div class="mb-3">
+                <label for="Name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="Name" name="Name" placeholder="Enter Your Name">
+              </div>
+            <div class="mb-3">
+                <label for="Email" class="form-label">Email Address</label>
+                <input type="email" class="form-control" id="Email" name="Email" placeholder="Enter Your Email Address">
+              </div>
+              <div class="mb-3">
+                <label for="Feedback" class="form-label">Feedback</label>
+                <textarea class="form-control" id="Feedback" name="Feedback" rows="3"></textarea>
+              </div>
+              <button class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</div>
+
+{% endblock body %}
